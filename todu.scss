@@ -22,49 +22,112 @@ body{
     border-radius: 50%;
     background:#C44F00;
 }
+@mixin center{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
 @each $w in $w-list{
     @media screen and (min-width:#{$w}){
         html{
             font-size: 100px*$w/$w-list;
         }
+    /*变*/
+   #bian{
+       width:$w;
+       height: 0.4rem;
+       position: fixed;
+       top: 0;
+       left: 0;
+       z-index: 66;
+       background: #333;
+       #wr{
+           width: 0.3rem;
+           height: 0.3rem;
+           font-family: "iconfont";
+           font-size:0.2rem;
+           text-align: center;
+           line-height: 0.3rem;
+           color: #fff;
+           @include center;
+       }
+       #clear{
+           position: absolute;
+           right: 0.1rem;
+           top: 0.1rem;
+          a{
+            color: #2369B6;
+            border:1px solid #666;
+            border-radius:20px;
+            display: inline-block;
+            height:0.2rem;
+            width:80px;
+            text-align:center;
+            line-height:0.2rem;
+          }
+        }
+   }
     /*头部*/
         .header{
+            width:$w;
             padding:0.1rem;
-            position: relative;
+            position:fixed;
+            top: 0.4rem;
+            left: 0;
+            z-index: 44;
+            box-sizing: border-box;
             input{
-                width: 100%;
+                width:100%;
                 height: 0.6rem;
                 outline: none;
                 border: 0;
+                border-radius: 0.6rem;
             }
             .add{
                 @include ding;
-                top: 0.3rem;
+                top:0.25rem;
                 right:0.2rem;
             }
         }
     /*内容*/
         .todulist{
+            width: $w;
+            margin-top: 1.1rem;
             padding:0.1rem;
+            box-sizing: border-box;
             li{
                 height: 0.6rem;
-                width: 100%;
-                line-height: 0.6rem;
+                width:100%;
+                border-radius:0.1rem;
                 padding-left: 0.3rem;
                 margin-bottom: 0.1rem;
-                background: #fff;
+                background: #BCF56C;
+                box-sizing: border-box;
                 position: relative;
+                .time{
+                    height:0.3rem;
+                    line-height: 0.3rem;
+                    color: #9B1CEB;
+                }
                 .content{
+                    height:0.3rem;
+                    line-height: 0.3rem;
                     color: #666;
                 }
                 .delet{
                     @include ding;
                     top: 0.2rem;
-                    right: 0.4rem;
+                    right: 0.2rem;
                     line-height: 0.3rem;
                     text-align: center;
                     color: #fff;
                     display: none;
+                }
+                .do{
+                   animation:do 0.8s ease 0s 1 forwards; 
                 }
             }
             .done{
@@ -75,6 +138,7 @@ body{
                     display: block;
                 }
             }
+            
             .piao{
                 animation:yi 0.8s ease 0s 1 forwards;
             }
@@ -86,17 +150,16 @@ body{
                     transform:translateX(150%);
                 }
             }
+            @keyframes do{
+                0%{
+                    transform:translateX(-150%);
+                }
+                100%{
+                    transform:translateX(0);
+                }
+            }
         }
-        #clear a{
-            color: #2369B6;
-            border:1px solid #666;
-            border-radius:20px;
-            display: inline-block;
-            height:0.2rem;
-            width:80px;
-            text-align:center;
-            line-height:0.2rem;
-        }
+        
         /*foot*/
         .foot{
             width: 100%;

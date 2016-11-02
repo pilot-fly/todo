@@ -2,102 +2,134 @@
 * {
   padding: 0;
   margin: 0;
-  list-style: 0;
-}
+  list-style: 0; }
 
 html {
-  font-size: 100px;
-}
+  font-size: 100px; }
 
 body {
   font-size: 14px;
   background: url(back1.jpg);
   background-size: 5rem 10rem;
-  background-repeat: no-repeat;
-}
+  background-repeat: no-repeat; }
 
 @media screen and (min-width: 320px) {
   html {
-    font-size: 32000px*px/320px, 360px, 375px, 412px, 414px;
-  }
+    font-size: 32000px*px/320px, 360px, 375px, 412px, 414px; }
+  /*变*/
+  #bian {
+    width: 320px;
+    height: 0.4rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 66;
+    background: #333; }
+    #bian #wr {
+      width: 0.3rem;
+      height: 0.3rem;
+      font-family: "iconfont";
+      font-size: 0.2rem;
+      text-align: center;
+      line-height: 0.3rem;
+      color: #fff;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto; }
+    #bian #clear {
+      position: absolute;
+      right: 0.1rem;
+      top: 0.1rem; }
+      #bian #clear a {
+        color: #2369B6;
+        border: 1px solid #666;
+        border-radius: 20px;
+        display: inline-block;
+        height: 0.2rem;
+        width: 80px;
+        text-align: center;
+        line-height: 0.2rem; }
   /*头部*/
   .header {
+    width: 320px;
     padding: 0.1rem;
-    position: relative;
-  }
-  .header input {
-    width: 100%;
-    height: 0.6rem;
-    outline: none;
-    border: 0;
-  }
-  .header .add {
-    position: absolute;
-    width: 0.3rem;
-    height: 0.3rem;
-    box-sizing: border-box;
-    border-radius: 50%;
-    background: #C44F00;
-    top: 0.3rem;
-    right: 0.2rem;
-  }
+    position: fixed;
+    top: 0.4rem;
+    left: 0;
+    z-index: 44;
+    box-sizing: border-box; }
+    .header input {
+      width: 100%;
+      height: 0.6rem;
+      outline: none;
+      border: 0;
+      border-radius: 0.6rem; }
+    .header .add {
+      position: absolute;
+      width: 0.3rem;
+      height: 0.3rem;
+      box-sizing: border-box;
+      border-radius: 50%;
+      background: #C44F00;
+      top: 0.25rem;
+      right: 0.2rem; }
   /*内容*/
   .todulist {
+    width: 320px;
+    margin-top: 1.1rem;
     padding: 0.1rem;
-  }
-  .todulist li {
-    height: 0.6rem;
-    width: 100%;
-    line-height: 0.6rem;
-    padding-left: 0.3rem;
-    margin-bottom: 0.1rem;
-    background: #fff;
-    position: relative;
-  }
-  .todulist li .content {
-    color: #666;
-  }
-  .todulist li .delet {
-    position: absolute;
-    width: 0.3rem;
-    height: 0.3rem;
-    box-sizing: border-box;
-    border-radius: 50%;
-    background: #C44F00;
-    top: 0.2rem;
-    right: 0.4rem;
-    line-height: 0.3rem;
-    text-align: center;
-    color: #fff;
-    display: none;
-  }
-  .todulist .done .content {
-    color: #E8E8E8;
-  }
-  .todulist .done .delet {
-    display: block;
-  }
-  .todulist .piao {
-    animation: yi 0.8s ease 0s 1 forwards;
-  }
+    box-sizing: border-box; }
+    .todulist li {
+      height: 0.6rem;
+      width: 100%;
+      border-radius: 0.1rem;
+      padding-left: 0.3rem;
+      margin-bottom: 0.1rem;
+      background: #BCF56C;
+      box-sizing: border-box;
+      position: relative; }
+      .todulist li .time {
+        height: 0.3rem;
+        line-height: 0.3rem;
+        color: #9B1CEB; }
+      .todulist li .content {
+        height: 0.3rem;
+        line-height: 0.3rem;
+        color: #666; }
+      .todulist li .delet {
+        position: absolute;
+        width: 0.3rem;
+        height: 0.3rem;
+        box-sizing: border-box;
+        border-radius: 50%;
+        background: #C44F00;
+        top: 0.2rem;
+        right: 0.2rem;
+        line-height: 0.3rem;
+        text-align: center;
+        color: #fff;
+        display: none; }
+      .todulist li .do {
+        animation: do 0.8s ease 0s 1 forwards; }
+    .todulist .done .content {
+      color: #E8E8E8; }
+    .todulist .done .delet {
+      display: block; }
+    .todulist .piao {
+      animation: yi 0.8s ease 0s 1 forwards; }
   @keyframes yi {
     0% {
-      transform: translateX(0);
-    }
+      transform: translateX(0); }
     100% {
-      transform: translateX(150%);
-    }
-  }
-  #clear a {
-    color: #2369B6;
-    border: 1px solid #666;
-    border-radius: 20px;
-    display: inline-block;
-    height: 0.2rem;
-    width: 80px;
-    text-align: center;
-    line-height: 0.2rem;
-  }
+      transform: translateX(150%); } }
+  @keyframes do {
+    0% {
+      transform: translateX(-150%); }
+    100% {
+      transform: translateX(0); } }
   /*foot*/
   .foot {
     width: 100%;
@@ -105,109 +137,139 @@ body {
     position: fixed;
     bottom: 0;
     left: 0;
-    z-index: 66;
-  }
-  .foot li {
-    width: 33.33333%;
-    box-sizing: border-box;
-    height: 0.4rem;
-    background: #fff;
-    list-style: none;
-    text-align: center;
-    line-height: 0.4rem;
-    float: left;
-  }
-  .foot .active {
-    color: #CB2D01;
-  }
-  .foot .cheng {
-    border-left: 1px solid #BCBCB9;
-    border-right: 1px solid #BCBCB9;
-  }
-}
+    z-index: 66; }
+    .foot li {
+      width: 33.33333%;
+      box-sizing: border-box;
+      height: 0.4rem;
+      background: #fff;
+      list-style: none;
+      text-align: center;
+      line-height: 0.4rem;
+      float: left; }
+    .foot .active {
+      color: #CB2D01; }
+    .foot .cheng {
+      border-left: 1px solid #BCBCB9;
+      border-right: 1px solid #BCBCB9; } }
 
 @media screen and (min-width: 360px) {
   html {
-    font-size: 36000px*px/320px, 360px, 375px, 412px, 414px;
-  }
+    font-size: 36000px*px/320px, 360px, 375px, 412px, 414px; }
+  /*变*/
+  #bian {
+    width: 360px;
+    height: 0.4rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 66;
+    background: #333; }
+    #bian #wr {
+      width: 0.3rem;
+      height: 0.3rem;
+      font-family: "iconfont";
+      font-size: 0.2rem;
+      text-align: center;
+      line-height: 0.3rem;
+      color: #fff;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto; }
+    #bian #clear {
+      position: absolute;
+      right: 0.1rem;
+      top: 0.1rem; }
+      #bian #clear a {
+        color: #2369B6;
+        border: 1px solid #666;
+        border-radius: 20px;
+        display: inline-block;
+        height: 0.2rem;
+        width: 80px;
+        text-align: center;
+        line-height: 0.2rem; }
   /*头部*/
   .header {
+    width: 360px;
     padding: 0.1rem;
-    position: relative;
-  }
-  .header input {
-    width: 100%;
-    height: 0.6rem;
-    outline: none;
-    border: 0;
-  }
-  .header .add {
-    position: absolute;
-    width: 0.3rem;
-    height: 0.3rem;
-    box-sizing: border-box;
-    border-radius: 50%;
-    background: #C44F00;
-    top: 0.3rem;
-    right: 0.2rem;
-  }
+    position: fixed;
+    top: 0.4rem;
+    left: 0;
+    z-index: 44;
+    box-sizing: border-box; }
+    .header input {
+      width: 100%;
+      height: 0.6rem;
+      outline: none;
+      border: 0;
+      border-radius: 0.6rem; }
+    .header .add {
+      position: absolute;
+      width: 0.3rem;
+      height: 0.3rem;
+      box-sizing: border-box;
+      border-radius: 50%;
+      background: #C44F00;
+      top: 0.25rem;
+      right: 0.2rem; }
   /*内容*/
   .todulist {
+    width: 360px;
+    margin-top: 1.1rem;
     padding: 0.1rem;
-  }
-  .todulist li {
-    height: 0.6rem;
-    width: 100%;
-    line-height: 0.6rem;
-    padding-left: 0.3rem;
-    margin-bottom: 0.1rem;
-    background: #fff;
-    position: relative;
-  }
-  .todulist li .content {
-    color: #666;
-  }
-  .todulist li .delet {
-    position: absolute;
-    width: 0.3rem;
-    height: 0.3rem;
-    box-sizing: border-box;
-    border-radius: 50%;
-    background: #C44F00;
-    top: 0.2rem;
-    right: 0.4rem;
-    line-height: 0.3rem;
-    text-align: center;
-    color: #fff;
-    display: none;
-  }
-  .todulist .done .content {
-    color: #E8E8E8;
-  }
-  .todulist .done .delet {
-    display: block;
-  }
-  .todulist .piao {
-    animation: yi 0.8s ease 0s 1 forwards;
-  }
+    box-sizing: border-box; }
+    .todulist li {
+      height: 0.6rem;
+      width: 100%;
+      border-radius: 0.1rem;
+      padding-left: 0.3rem;
+      margin-bottom: 0.1rem;
+      background: #BCF56C;
+      box-sizing: border-box;
+      position: relative; }
+      .todulist li .time {
+        height: 0.3rem;
+        line-height: 0.3rem;
+        color: #9B1CEB; }
+      .todulist li .content {
+        height: 0.3rem;
+        line-height: 0.3rem;
+        color: #666; }
+      .todulist li .delet {
+        position: absolute;
+        width: 0.3rem;
+        height: 0.3rem;
+        box-sizing: border-box;
+        border-radius: 50%;
+        background: #C44F00;
+        top: 0.2rem;
+        right: 0.2rem;
+        line-height: 0.3rem;
+        text-align: center;
+        color: #fff;
+        display: none; }
+      .todulist li .do {
+        animation: do 0.8s ease 0s 1 forwards; }
+    .todulist .done .content {
+      color: #E8E8E8; }
+    .todulist .done .delet {
+      display: block; }
+    .todulist .piao {
+      animation: yi 0.8s ease 0s 1 forwards; }
   @keyframes yi {
     0% {
-      transform: translateX(0);
-    }
+      transform: translateX(0); }
     100% {
-      transform: translateX(150%);
-    }
-  }
-  #clear a {
-    color: #2369B6;
-    border: 1px solid #666;
-    border-radius: 20px;
-    display: inline-block;
-    height: 0.2rem;
-    width: 80px;
-    text-align: center;
-    line-height: 0.2rem;
-  }
+      transform: translateX(150%); } }
+  @keyframes do {
+    0% {
+      transform: translateX(-150%); }
+    100% {
+      transform: translateX(0); } }
   /*foot*/
   .foot {
     width: 100%;
@@ -215,109 +277,139 @@ body {
     position: fixed;
     bottom: 0;
     left: 0;
-    z-index: 66;
-  }
-  .foot li {
-    width: 33.33333%;
-    box-sizing: border-box;
-    height: 0.4rem;
-    background: #fff;
-    list-style: none;
-    text-align: center;
-    line-height: 0.4rem;
-    float: left;
-  }
-  .foot .active {
-    color: #CB2D01;
-  }
-  .foot .cheng {
-    border-left: 1px solid #BCBCB9;
-    border-right: 1px solid #BCBCB9;
-  }
-}
+    z-index: 66; }
+    .foot li {
+      width: 33.33333%;
+      box-sizing: border-box;
+      height: 0.4rem;
+      background: #fff;
+      list-style: none;
+      text-align: center;
+      line-height: 0.4rem;
+      float: left; }
+    .foot .active {
+      color: #CB2D01; }
+    .foot .cheng {
+      border-left: 1px solid #BCBCB9;
+      border-right: 1px solid #BCBCB9; } }
 
 @media screen and (min-width: 375px) {
   html {
-    font-size: 37500px*px/320px, 360px, 375px, 412px, 414px;
-  }
+    font-size: 37500px*px/320px, 360px, 375px, 412px, 414px; }
+  /*变*/
+  #bian {
+    width: 375px;
+    height: 0.4rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 66;
+    background: #333; }
+    #bian #wr {
+      width: 0.3rem;
+      height: 0.3rem;
+      font-family: "iconfont";
+      font-size: 0.2rem;
+      text-align: center;
+      line-height: 0.3rem;
+      color: #fff;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto; }
+    #bian #clear {
+      position: absolute;
+      right: 0.1rem;
+      top: 0.1rem; }
+      #bian #clear a {
+        color: #2369B6;
+        border: 1px solid #666;
+        border-radius: 20px;
+        display: inline-block;
+        height: 0.2rem;
+        width: 80px;
+        text-align: center;
+        line-height: 0.2rem; }
   /*头部*/
   .header {
+    width: 375px;
     padding: 0.1rem;
-    position: relative;
-  }
-  .header input {
-    width: 100%;
-    height: 0.6rem;
-    outline: none;
-    border: 0;
-  }
-  .header .add {
-    position: absolute;
-    width: 0.3rem;
-    height: 0.3rem;
-    box-sizing: border-box;
-    border-radius: 50%;
-    background: #C44F00;
-    top: 0.3rem;
-    right: 0.2rem;
-  }
+    position: fixed;
+    top: 0.4rem;
+    left: 0;
+    z-index: 44;
+    box-sizing: border-box; }
+    .header input {
+      width: 100%;
+      height: 0.6rem;
+      outline: none;
+      border: 0;
+      border-radius: 0.6rem; }
+    .header .add {
+      position: absolute;
+      width: 0.3rem;
+      height: 0.3rem;
+      box-sizing: border-box;
+      border-radius: 50%;
+      background: #C44F00;
+      top: 0.25rem;
+      right: 0.2rem; }
   /*内容*/
   .todulist {
+    width: 375px;
+    margin-top: 1.1rem;
     padding: 0.1rem;
-  }
-  .todulist li {
-    height: 0.6rem;
-    width: 100%;
-    line-height: 0.6rem;
-    padding-left: 0.3rem;
-    margin-bottom: 0.1rem;
-    background: #fff;
-    position: relative;
-  }
-  .todulist li .content {
-    color: #666;
-  }
-  .todulist li .delet {
-    position: absolute;
-    width: 0.3rem;
-    height: 0.3rem;
-    box-sizing: border-box;
-    border-radius: 50%;
-    background: #C44F00;
-    top: 0.2rem;
-    right: 0.4rem;
-    line-height: 0.3rem;
-    text-align: center;
-    color: #fff;
-    display: none;
-  }
-  .todulist .done .content {
-    color: #E8E8E8;
-  }
-  .todulist .done .delet {
-    display: block;
-  }
-  .todulist .piao {
-    animation: yi 0.8s ease 0s 1 forwards;
-  }
+    box-sizing: border-box; }
+    .todulist li {
+      height: 0.6rem;
+      width: 100%;
+      border-radius: 0.1rem;
+      padding-left: 0.3rem;
+      margin-bottom: 0.1rem;
+      background: #BCF56C;
+      box-sizing: border-box;
+      position: relative; }
+      .todulist li .time {
+        height: 0.3rem;
+        line-height: 0.3rem;
+        color: #9B1CEB; }
+      .todulist li .content {
+        height: 0.3rem;
+        line-height: 0.3rem;
+        color: #666; }
+      .todulist li .delet {
+        position: absolute;
+        width: 0.3rem;
+        height: 0.3rem;
+        box-sizing: border-box;
+        border-radius: 50%;
+        background: #C44F00;
+        top: 0.2rem;
+        right: 0.2rem;
+        line-height: 0.3rem;
+        text-align: center;
+        color: #fff;
+        display: none; }
+      .todulist li .do {
+        animation: do 0.8s ease 0s 1 forwards; }
+    .todulist .done .content {
+      color: #E8E8E8; }
+    .todulist .done .delet {
+      display: block; }
+    .todulist .piao {
+      animation: yi 0.8s ease 0s 1 forwards; }
   @keyframes yi {
     0% {
-      transform: translateX(0);
-    }
+      transform: translateX(0); }
     100% {
-      transform: translateX(150%);
-    }
-  }
-  #clear a {
-    color: #2369B6;
-    border: 1px solid #666;
-    border-radius: 20px;
-    display: inline-block;
-    height: 0.2rem;
-    width: 80px;
-    text-align: center;
-    line-height: 0.2rem;
-  }
+      transform: translateX(150%); } }
+  @keyframes do {
+    0% {
+      transform: translateX(-150%); }
+    100% {
+      transform: translateX(0); } }
   /*foot*/
   .foot {
     width: 100%;
@@ -325,109 +417,139 @@ body {
     position: fixed;
     bottom: 0;
     left: 0;
-    z-index: 66;
-  }
-  .foot li {
-    width: 33.33333%;
-    box-sizing: border-box;
-    height: 0.4rem;
-    background: #fff;
-    list-style: none;
-    text-align: center;
-    line-height: 0.4rem;
-    float: left;
-  }
-  .foot .active {
-    color: #CB2D01;
-  }
-  .foot .cheng {
-    border-left: 1px solid #BCBCB9;
-    border-right: 1px solid #BCBCB9;
-  }
-}
+    z-index: 66; }
+    .foot li {
+      width: 33.33333%;
+      box-sizing: border-box;
+      height: 0.4rem;
+      background: #fff;
+      list-style: none;
+      text-align: center;
+      line-height: 0.4rem;
+      float: left; }
+    .foot .active {
+      color: #CB2D01; }
+    .foot .cheng {
+      border-left: 1px solid #BCBCB9;
+      border-right: 1px solid #BCBCB9; } }
 
 @media screen and (min-width: 412px) {
   html {
-    font-size: 41200px*px/320px, 360px, 375px, 412px, 414px;
-  }
+    font-size: 41200px*px/320px, 360px, 375px, 412px, 414px; }
+  /*变*/
+  #bian {
+    width: 412px;
+    height: 0.4rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 66;
+    background: #333; }
+    #bian #wr {
+      width: 0.3rem;
+      height: 0.3rem;
+      font-family: "iconfont";
+      font-size: 0.2rem;
+      text-align: center;
+      line-height: 0.3rem;
+      color: #fff;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto; }
+    #bian #clear {
+      position: absolute;
+      right: 0.1rem;
+      top: 0.1rem; }
+      #bian #clear a {
+        color: #2369B6;
+        border: 1px solid #666;
+        border-radius: 20px;
+        display: inline-block;
+        height: 0.2rem;
+        width: 80px;
+        text-align: center;
+        line-height: 0.2rem; }
   /*头部*/
   .header {
+    width: 412px;
     padding: 0.1rem;
-    position: relative;
-  }
-  .header input {
-    width: 100%;
-    height: 0.6rem;
-    outline: none;
-    border: 0;
-  }
-  .header .add {
-    position: absolute;
-    width: 0.3rem;
-    height: 0.3rem;
-    box-sizing: border-box;
-    border-radius: 50%;
-    background: #C44F00;
-    top: 0.3rem;
-    right: 0.2rem;
-  }
+    position: fixed;
+    top: 0.4rem;
+    left: 0;
+    z-index: 44;
+    box-sizing: border-box; }
+    .header input {
+      width: 100%;
+      height: 0.6rem;
+      outline: none;
+      border: 0;
+      border-radius: 0.6rem; }
+    .header .add {
+      position: absolute;
+      width: 0.3rem;
+      height: 0.3rem;
+      box-sizing: border-box;
+      border-radius: 50%;
+      background: #C44F00;
+      top: 0.25rem;
+      right: 0.2rem; }
   /*内容*/
   .todulist {
+    width: 412px;
+    margin-top: 1.1rem;
     padding: 0.1rem;
-  }
-  .todulist li {
-    height: 0.6rem;
-    width: 100%;
-    line-height: 0.6rem;
-    padding-left: 0.3rem;
-    margin-bottom: 0.1rem;
-    background: #fff;
-    position: relative;
-  }
-  .todulist li .content {
-    color: #666;
-  }
-  .todulist li .delet {
-    position: absolute;
-    width: 0.3rem;
-    height: 0.3rem;
-    box-sizing: border-box;
-    border-radius: 50%;
-    background: #C44F00;
-    top: 0.2rem;
-    right: 0.4rem;
-    line-height: 0.3rem;
-    text-align: center;
-    color: #fff;
-    display: none;
-  }
-  .todulist .done .content {
-    color: #E8E8E8;
-  }
-  .todulist .done .delet {
-    display: block;
-  }
-  .todulist .piao {
-    animation: yi 0.8s ease 0s 1 forwards;
-  }
+    box-sizing: border-box; }
+    .todulist li {
+      height: 0.6rem;
+      width: 100%;
+      border-radius: 0.1rem;
+      padding-left: 0.3rem;
+      margin-bottom: 0.1rem;
+      background: #BCF56C;
+      box-sizing: border-box;
+      position: relative; }
+      .todulist li .time {
+        height: 0.3rem;
+        line-height: 0.3rem;
+        color: #9B1CEB; }
+      .todulist li .content {
+        height: 0.3rem;
+        line-height: 0.3rem;
+        color: #666; }
+      .todulist li .delet {
+        position: absolute;
+        width: 0.3rem;
+        height: 0.3rem;
+        box-sizing: border-box;
+        border-radius: 50%;
+        background: #C44F00;
+        top: 0.2rem;
+        right: 0.2rem;
+        line-height: 0.3rem;
+        text-align: center;
+        color: #fff;
+        display: none; }
+      .todulist li .do {
+        animation: do 0.8s ease 0s 1 forwards; }
+    .todulist .done .content {
+      color: #E8E8E8; }
+    .todulist .done .delet {
+      display: block; }
+    .todulist .piao {
+      animation: yi 0.8s ease 0s 1 forwards; }
   @keyframes yi {
     0% {
-      transform: translateX(0);
-    }
+      transform: translateX(0); }
     100% {
-      transform: translateX(150%);
-    }
-  }
-  #clear a {
-    color: #2369B6;
-    border: 1px solid #666;
-    border-radius: 20px;
-    display: inline-block;
-    height: 0.2rem;
-    width: 80px;
-    text-align: center;
-    line-height: 0.2rem;
-  }
+      transform: translateX(150%); } }
+  @keyframes do {
+    0% {
+      transform: translateX(-150%); }
+    100% {
+      transform: translateX(0); } }
   /*foot*/
   .foot {
     width: 100%;
@@ -435,109 +557,139 @@ body {
     position: fixed;
     bottom: 0;
     left: 0;
-    z-index: 66;
-  }
-  .foot li {
-    width: 33.33333%;
-    box-sizing: border-box;
-    height: 0.4rem;
-    background: #fff;
-    list-style: none;
-    text-align: center;
-    line-height: 0.4rem;
-    float: left;
-  }
-  .foot .active {
-    color: #CB2D01;
-  }
-  .foot .cheng {
-    border-left: 1px solid #BCBCB9;
-    border-right: 1px solid #BCBCB9;
-  }
-}
+    z-index: 66; }
+    .foot li {
+      width: 33.33333%;
+      box-sizing: border-box;
+      height: 0.4rem;
+      background: #fff;
+      list-style: none;
+      text-align: center;
+      line-height: 0.4rem;
+      float: left; }
+    .foot .active {
+      color: #CB2D01; }
+    .foot .cheng {
+      border-left: 1px solid #BCBCB9;
+      border-right: 1px solid #BCBCB9; } }
 
 @media screen and (min-width: 414px) {
   html {
-    font-size: 41400px*px/320px, 360px, 375px, 412px, 414px;
-  }
+    font-size: 41400px*px/320px, 360px, 375px, 412px, 414px; }
+  /*变*/
+  #bian {
+    width: 414px;
+    height: 0.4rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 66;
+    background: #333; }
+    #bian #wr {
+      width: 0.3rem;
+      height: 0.3rem;
+      font-family: "iconfont";
+      font-size: 0.2rem;
+      text-align: center;
+      line-height: 0.3rem;
+      color: #fff;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto; }
+    #bian #clear {
+      position: absolute;
+      right: 0.1rem;
+      top: 0.1rem; }
+      #bian #clear a {
+        color: #2369B6;
+        border: 1px solid #666;
+        border-radius: 20px;
+        display: inline-block;
+        height: 0.2rem;
+        width: 80px;
+        text-align: center;
+        line-height: 0.2rem; }
   /*头部*/
   .header {
+    width: 414px;
     padding: 0.1rem;
-    position: relative;
-  }
-  .header input {
-    width: 100%;
-    height: 0.6rem;
-    outline: none;
-    border: 0;
-  }
-  .header .add {
-    position: absolute;
-    width: 0.3rem;
-    height: 0.3rem;
-    box-sizing: border-box;
-    border-radius: 50%;
-    background: #C44F00;
-    top: 0.3rem;
-    right: 0.2rem;
-  }
+    position: fixed;
+    top: 0.4rem;
+    left: 0;
+    z-index: 44;
+    box-sizing: border-box; }
+    .header input {
+      width: 100%;
+      height: 0.6rem;
+      outline: none;
+      border: 0;
+      border-radius: 0.6rem; }
+    .header .add {
+      position: absolute;
+      width: 0.3rem;
+      height: 0.3rem;
+      box-sizing: border-box;
+      border-radius: 50%;
+      background: #C44F00;
+      top: 0.25rem;
+      right: 0.2rem; }
   /*内容*/
   .todulist {
+    width: 414px;
+    margin-top: 1.1rem;
     padding: 0.1rem;
-  }
-  .todulist li {
-    height: 0.6rem;
-    width: 100%;
-    line-height: 0.6rem;
-    padding-left: 0.3rem;
-    margin-bottom: 0.1rem;
-    background: #fff;
-    position: relative;
-  }
-  .todulist li .content {
-    color: #666;
-  }
-  .todulist li .delet {
-    position: absolute;
-    width: 0.3rem;
-    height: 0.3rem;
-    box-sizing: border-box;
-    border-radius: 50%;
-    background: #C44F00;
-    top: 0.2rem;
-    right: 0.4rem;
-    line-height: 0.3rem;
-    text-align: center;
-    color: #fff;
-    display: none;
-  }
-  .todulist .done .content {
-    color: #E8E8E8;
-  }
-  .todulist .done .delet {
-    display: block;
-  }
-  .todulist .piao {
-    animation: yi 0.8s ease 0s 1 forwards;
-  }
+    box-sizing: border-box; }
+    .todulist li {
+      height: 0.6rem;
+      width: 100%;
+      border-radius: 0.1rem;
+      padding-left: 0.3rem;
+      margin-bottom: 0.1rem;
+      background: #BCF56C;
+      box-sizing: border-box;
+      position: relative; }
+      .todulist li .time {
+        height: 0.3rem;
+        line-height: 0.3rem;
+        color: #9B1CEB; }
+      .todulist li .content {
+        height: 0.3rem;
+        line-height: 0.3rem;
+        color: #666; }
+      .todulist li .delet {
+        position: absolute;
+        width: 0.3rem;
+        height: 0.3rem;
+        box-sizing: border-box;
+        border-radius: 50%;
+        background: #C44F00;
+        top: 0.2rem;
+        right: 0.2rem;
+        line-height: 0.3rem;
+        text-align: center;
+        color: #fff;
+        display: none; }
+      .todulist li .do {
+        animation: do 0.8s ease 0s 1 forwards; }
+    .todulist .done .content {
+      color: #E8E8E8; }
+    .todulist .done .delet {
+      display: block; }
+    .todulist .piao {
+      animation: yi 0.8s ease 0s 1 forwards; }
   @keyframes yi {
     0% {
-      transform: translateX(0);
-    }
+      transform: translateX(0); }
     100% {
-      transform: translateX(150%);
-    }
-  }
-  #clear a {
-    color: #2369B6;
-    border: 1px solid #666;
-    border-radius: 20px;
-    display: inline-block;
-    height: 0.2rem;
-    width: 80px;
-    text-align: center;
-    line-height: 0.2rem;
-  }
+      transform: translateX(150%); } }
+  @keyframes do {
+    0% {
+      transform: translateX(-150%); }
+    100% {
+      transform: translateX(0); } }
   /*foot*/
   .foot {
     width: 100%;
@@ -545,23 +697,18 @@ body {
     position: fixed;
     bottom: 0;
     left: 0;
-    z-index: 66;
-  }
-  .foot li {
-    width: 33.33333%;
-    box-sizing: border-box;
-    height: 0.4rem;
-    background: #fff;
-    list-style: none;
-    text-align: center;
-    line-height: 0.4rem;
-    float: left;
-  }
-  .foot .active {
-    color: #CB2D01;
-  }
-  .foot .cheng {
-    border-left: 1px solid #BCBCB9;
-    border-right: 1px solid #BCBCB9;
-  }
-}
+    z-index: 66; }
+    .foot li {
+      width: 33.33333%;
+      box-sizing: border-box;
+      height: 0.4rem;
+      background: #fff;
+      list-style: none;
+      text-align: center;
+      line-height: 0.4rem;
+      float: left; }
+    .foot .active {
+      color: #CB2D01; }
+    .foot .cheng {
+      border-left: 1px solid #BCBCB9;
+      border-right: 1px solid #BCBCB9; } }

@@ -8,11 +8,22 @@ $(function(){
 		todus=JSON.parse(localStorage.d);
 		render();
 	}
+	function show(){
+		var d = new Date();
+		var vYear = d.getFullYear();
+		var vMon = d.getMonth() + 1;
+		var vDay = d.getDate();
+		var h = d.getHours(); 
+		var m = d.getMinutes(); 
+		var se = d.getSeconds(); 
+		s=vYear+"年"+(vMon<10 ? "0" + vMon : vMon)+"月"+(vDay<10 ? "0"+ vDay : vDay)+"日"+(h<10 ? "0"+ h : h)+"点"+(m<10 ? "0" + m : m)+"分"+(se<10 ? "0" +se : se);
+		return s;
+	}
 	function render(){
 		ul.empty();
 		for(var i=0;i<todus.length;i++){
 			var c=(todus[i].state)?"done":"";
-			$('<li class="'+c+'"><div class="content">'+todus[i].name+'</div><div class="delet">x</div></li>').appendTo(".todulist");
+			$('<li class="'+c+'"><div class="time do">日期:'+show()+'</div><div class="content do">'+todus[i].name+'</div><div class="delet">x</div></li>').appendTo(".todulist");
 			
 		}
 	}
