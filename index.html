@@ -20,20 +20,28 @@
 		<script src='todu.js'></script>
 	</head>
 	<body>
-		<div id='bian'>
-			<div id='wr'>&#xe63c;</div>
-			<div id='clear'><a class='clearall'>全部清除</a></div>
+		<!-- 首页 -->
+		<a href="" id='zhu'>
+			<img src="zhu.jpg" />
+		</a>
+		<div id='back'>
+			<!-- <img src="back1.jpg" id='back'> -->
+			<div id='bian'>
+				<div id='wr'>&#xe63c;</div>
+				<div id='clear'><a class='clearall'>全部清除</a></div>
+			</div>
+			<div class='header'>
+				<input type='text' />
+				<div class='add'></div>
+			</div>
+			<ul class="todulist">
+			</ul>
+			<ul class='foot'>
+				<li data-role='all' class="all active">全部</li>
+				<li data-role='com' class="cheng">已完成</li>
+				<li data-role='re' class="bai">未完成</li>
+			</ul>
 		</div>
-		<div class='header'>
-			<input type='text' />
-			<div class='add'></div>
-		</div>
-		<ul class="todulist">
-		</ul>
-		<ul class='foot'>
-			<li data-role='all' class="all active">全部</li>
-			<li data-role='com' class="cheng">已完成</li>
-			<li data-role='re' class="bai">未完成</li>
-		</ul>
+		
 	</body>
 </html>

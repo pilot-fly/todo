@@ -9,10 +9,12 @@ html{
     font-size: 100px;
 }
 body{
+    height:100%;
     font-size: 14px;
     background:url(back1.jpg);
     background-size:5rem 10rem;
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 @mixin ding{
     position: absolute;
@@ -34,10 +36,26 @@ body{
     @media screen and (min-width:#{$w}){
         html{
             font-size: 100px*$w/$w-list;
+            height: 667px;
+        }
+        /*首页*/
+        #zhu{
+            display: block;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            img{
+                width:4rem;
+            }
+        }
+        #back{
+            width: 100%;
+            overflow: hidden;
+            display: none;
         }
     /*变*/
    #bian{
-       width:$w;
+       width:100%;
        height: 0.4rem;
        position: fixed;
        top: 0;

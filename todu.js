@@ -1,4 +1,10 @@
 $(function(){
+	//主页跳转
+	var t=setTimeout(function(){
+        $("#zhu").css("display","none");
+        $("#back").css("display","block");
+	},3000);
+	clearTimeout();
 	var add=$(".add");
 	var input=$(".header input");
 	var ul=$(".todulist");
@@ -23,8 +29,9 @@ $(function(){
 		ul.empty();
 		for(var i=0;i<todus.length;i++){
 			var c=(todus[i].state)?"done":"";
-			$('<li class="'+c+'"><div class="time do">日期:'+show()+'</div><div class="content do">'+todus[i].name+'</div><div class="delet">x</div></li>').appendTo(".todulist");
-			
+			var t=(todus[i].sta)?"do":"";
+			$('<li class="'+c+'"><div class="time '+t+'">日期:'+show()+'</div><div class="content '+t+'">'+todus[i].name+'</div><div class="delet">x</div></li>').appendTo(".todulist");
+			todus[i].sta=0;
 		}
 	}
 	add.on("touchend",function(){
@@ -32,7 +39,8 @@ $(function(){
 		if(!v){
 			return;
 		}
-		var todu={name:v,state:0};
+		var todu={name:v,state:0,sta:1};
+		var date=show();
 		todus.push(todu);
 		localStorage.d=JSON.stringify(todus);
 		render();
